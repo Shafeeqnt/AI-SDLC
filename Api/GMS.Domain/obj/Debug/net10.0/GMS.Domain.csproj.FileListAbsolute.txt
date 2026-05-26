@@ -1,0 +1,11 @@
+D:\download\Codex With Figma\Api\GMS.Domain\bin\Debug\net10.0\GMS.Domain.deps.json
+D:\download\Codex With Figma\Api\GMS.Domain\bin\Debug\net10.0\GMS.Domain.dll
+D:\download\Codex With Figma\Api\GMS.Domain\bin\Debug\net10.0\GMS.Domain.pdb
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\GMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\GMS.Domain.AssemblyInfoInputs.cache
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\GMS.Domain.AssemblyInfo.cs
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\GMS.Domain.csproj.CoreCompileInputs.cache
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\GMS.Domain.dll
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\refint\GMS.Domain.dll
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\GMS.Domain.pdb
+D:\download\Codex With Figma\Api\GMS.Domain\obj\Debug\net10.0\ref\GMS.Domain.dll

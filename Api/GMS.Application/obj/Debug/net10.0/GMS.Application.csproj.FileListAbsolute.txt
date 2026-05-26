@@ -1,0 +1,15 @@
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.csproj.AssemblyReference.cache
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.AssemblyInfoInputs.cache
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.AssemblyInfo.cs
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.csproj.CoreCompileInputs.cache
+D:\download\Codex With Figma\Api\GMS.Application\bin\Debug\net10.0\GMS.Application.deps.json
+D:\download\Codex With Figma\Api\GMS.Application\bin\Debug\net10.0\GMS.Application.dll
+D:\download\Codex With Figma\Api\GMS.Application\bin\Debug\net10.0\GMS.Application.pdb
+D:\download\Codex With Figma\Api\GMS.Application\bin\Debug\net10.0\GMS.Domain.dll
+D:\download\Codex With Figma\Api\GMS.Application\bin\Debug\net10.0\GMS.Domain.pdb
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Appl.5DABD767.Up2Date
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.dll
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\refint\GMS.Application.dll
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\GMS.Application.pdb
+D:\download\Codex With Figma\Api\GMS.Application\obj\Debug\net10.0\ref\GMS.Application.dll
