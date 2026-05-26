@@ -1,0 +1,358 @@
+{
+  "backend": [
+    {
+      "id": "DSN-001",
+      "name": "Define authentication and access control contracts",
+      "module": "Authentication",
+      "type": "design",
+      "depends_on": [],
+      "parallelizable": true,
+      "artifacts": [
+        "docs/artifacts/requirements/versions/v1/requirements.md",
+        "docs/artifacts/architecture/versions/v1/architecture.md"
+      ]
+    },
+    {
+      "id": "BKD-001",
+      "name": "Implement authentication endpoints and JWT issuance",
+      "module": "Authentication",
+      "type": "backend",
+      "depends_on": [
+        "DSN-001"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api/GMS.Api",
+        "Api/GMS.Application",
+        "Api/GMS.Infrastructure"
+      ]
+    },
+    {
+      "id": "DSN-002",
+      "name": "Define user management schema and API contracts",
+      "module": "User Management",
+      "type": "design",
+      "depends_on": [],
+      "parallelizable": true,
+      "artifacts": [
+        "docs/artifacts/requirements/versions/v1/requirements.md",
+        "docs/artifacts/architecture/versions/v1/architecture.md"
+      ]
+    },
+    {
+      "id": "BKD-002",
+      "name": "Implement user administration domain, persistence, and APIs",
+      "module": "User Management",
+      "type": "backend",
+      "depends_on": [
+        "DSN-002",
+        "BKD-001"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api/GMS.Api",
+        "Api/GMS.Application",
+        "Api/GMS.Domain",
+        "Api/GMS.Infrastructure"
+      ]
+    },
+    {
+      "id": "DSN-003",
+      "name": "Define grievance lifecycle schema and endpoint contracts",
+      "module": "Grievance Management",
+      "type": "design",
+      "depends_on": [],
+      "parallelizable": true,
+      "artifacts": [
+        "docs/artifacts/requirements/versions/v1/requirements.md",
+        "docs/artifacts/architecture/versions/v1/architecture.md"
+      ]
+    },
+    {
+      "id": "BKD-003",
+      "name": "Implement grievance submission, tracking, and reference generation APIs",
+      "module": "Grievance Management",
+      "type": "backend",
+      "depends_on": [
+        "DSN-003",
+        "BKD-001"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api/GMS.Api",
+        "Api/GMS.Application",
+        "Api/GMS.Domain",
+        "Api/GMS.Infrastructure"
+      ]
+    },
+    {
+      "id": "DSN-004",
+      "name": "Define notification model and delivery interface contracts",
+      "module": "Notifications",
+      "type": "design",
+      "depends_on": [],
+      "parallelizable": true,
+      "artifacts": [
+        "docs/artifacts/requirements/versions/v1/requirements.md",
+        "docs/artifacts/architecture/versions/v1/architecture.md"
+      ]
+    },
+    {
+      "id": "BKD-004",
+      "name": "Implement grievance notification persistence and staff alert workflow",
+      "module": "Notifications",
+      "type": "backend",
+      "depends_on": [
+        "DSN-004",
+        "BKD-003"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api/GMS.Application",
+        "Api/GMS.Domain",
+        "Api/GMS.Infrastructure"
+      ]
+    },
+    {
+      "id": "DSN-005",
+      "name": "Define reporting filters and system settings contracts",
+      "module": "Reporting and Settings",
+      "type": "design",
+      "depends_on": [],
+      "parallelizable": true,
+      "artifacts": [
+        "docs/artifacts/requirements/versions/v1/requirements.md",
+        "docs/artifacts/architecture/versions/v1/architecture.md"
+      ]
+    },
+    {
+      "id": "BKD-005",
+      "name": "Implement grievance reporting queries and system settings APIs",
+      "module": "Reporting and Settings",
+      "type": "backend",
+      "depends_on": [
+        "DSN-005",
+        "BKD-002",
+        "BKD-003"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api/GMS.Api",
+        "Api/GMS.Application",
+        "Api/GMS.Domain",
+        "Api/GMS.Infrastructure"
+      ]
+    }
+  ],
+  "frontend": [
+    {
+      "id": "FRD-001",
+      "name": "Build login, forgot password, and reset password flows",
+      "module": "Authentication",
+      "type": "frontend",
+      "depends_on": [
+        "BKD-001"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "App/src/features/auth",
+        "App/src/services"
+      ]
+    },
+    {
+      "id": "FRD-002",
+      "name": "Build user listing and user maintenance screens",
+      "module": "User Management",
+      "type": "frontend",
+      "depends_on": [
+        "BKD-002",
+        "FRD-001"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "App/src/features/users",
+        "App/src/components",
+        "App/src/services"
+      ]
+    },
+    {
+      "id": "FRD-003",
+      "name": "Build grievance submission, grievance list, and grievance detail screens",
+      "module": "Grievance Management",
+      "type": "frontend",
+      "depends_on": [
+        "BKD-003",
+        "FRD-001"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "App/src/features/grievances",
+        "App/src/components",
+        "App/src/services"
+      ]
+    },
+    {
+      "id": "FRD-004",
+      "name": "Build notification center and unread notification interactions",
+      "module": "Notifications",
+      "type": "frontend",
+      "depends_on": [
+        "BKD-004",
+        "FRD-001"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "App/src/features/notifications",
+        "App/src/services"
+      ]
+    },
+    {
+      "id": "FRD-005",
+      "name": "Build reporting filters and system settings screens",
+      "module": "Reporting and Settings",
+      "type": "frontend",
+      "depends_on": [
+        "BKD-005",
+        "FRD-001"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "App/src/features/settings",
+        "App/src/features/grievances",
+        "App/src/services"
+      ]
+    }
+  ],
+  "testing": [
+    {
+      "id": "TST-001",
+      "name": "Create unit and integration tests for authentication flows",
+      "module": "Authentication",
+      "type": "testing",
+      "depends_on": [
+        "BKD-001",
+        "FRD-001"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "Api/GMS.Application.Tests",
+        "App/src/features/auth"
+      ]
+    },
+    {
+      "id": "TST-002",
+      "name": "Create unit and integration tests for user management permissions and validations",
+      "module": "User Management",
+      "type": "testing",
+      "depends_on": [
+        "BKD-002",
+        "FRD-002"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "Api/GMS.Application.Tests",
+        "App/src/features/users"
+      ]
+    },
+    {
+      "id": "TST-003",
+      "name": "Create unit and integration tests for grievance submission and tracking edge cases",
+      "module": "Grievance Management",
+      "type": "testing",
+      "depends_on": [
+        "BKD-003",
+        "FRD-003"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "Api/GMS.Application.Tests",
+        "App/src/features/grievances"
+      ]
+    },
+    {
+      "id": "TST-004",
+      "name": "Create tests for notification creation, unread states, and failure handling",
+      "module": "Notifications",
+      "type": "testing",
+      "depends_on": [
+        "BKD-004",
+        "FRD-004"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "Api/GMS.Application.Tests",
+        "App/src/features/notifications"
+      ]
+    },
+    {
+      "id": "TST-005",
+      "name": "Create tests for reporting filters, settings authorization, and empty states",
+      "module": "Reporting and Settings",
+      "type": "testing",
+      "depends_on": [
+        "BKD-005",
+        "FRD-005"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "Api/GMS.Application.Tests",
+        "App/src/features/settings",
+        "App/src/features/grievances"
+      ]
+    }
+  ],
+  "devops": [
+    {
+      "id": "DVO-001",
+      "name": "Set up backend and frontend build pipeline with quality gates",
+      "module": "Platform",
+      "type": "devops",
+      "depends_on": [
+        "BKD-001",
+        "FRD-001"
+      ],
+      "parallelizable": true,
+      "artifacts": [
+        "Api",
+        "App"
+      ]
+    },
+    {
+      "id": "DVO-002",
+      "name": "Configure database migrations, seed data, and startup migration execution",
+      "module": "Platform",
+      "type": "devops",
+      "depends_on": [
+        "BKD-002",
+        "BKD-003",
+        "BKD-005"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api/GMS.Infrastructure",
+        "Api/GMS.Api"
+      ]
+    },
+    {
+      "id": "DVO-003",
+      "name": "Prepare deployment configuration for API, SPA, and MySQL environments",
+      "module": "Platform",
+      "type": "devops",
+      "depends_on": [
+        "DVO-001",
+        "DVO-002",
+        "TST-001",
+        "TST-002",
+        "TST-003",
+        "TST-004",
+        "TST-005"
+      ],
+      "parallelizable": false,
+      "artifacts": [
+        "Api",
+        "App",
+        "docs/artifacts/architecture/versions/v1/architecture.md"
+      ]
+    }
+  ]
+}

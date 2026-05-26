@@ -1,0 +1,13 @@
+[
+  {
+    "version": "v1",
+    "timestamp": "2026-05-21T00:00:00+05:30",
+    "source": "docs/reference/GMS.pdf",
+    "moduleName": "Grievance Management Application",
+    "summary": "Initial requirements generated from the grievance management business requirements document.",
+    "artifacts": {
+      "requirements": "docs/artifacts/requirements/versions/v1/requirements.md",
+      "changelog": "docs/artifacts/CHANGELOG.md"
+    }
+  }
+]

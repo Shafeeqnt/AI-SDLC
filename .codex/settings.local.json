@@ -1,0 +1,9 @@
+{
+  "enabledMcpjsonServers": [
+    "figma"
+  ],
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "allow": ["*"]
+  }
+}

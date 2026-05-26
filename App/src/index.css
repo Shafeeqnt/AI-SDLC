@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #242424;
+  background: #ebebeb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --page-background: #ebebeb;
+  --workspace-background: #f6f6f6;
+  --nav-background: #f5f5f5;
+  --panel-border: #d1d1d1;
+  --text-strong: #242424;
+  --text-subtle: #727272;
+  --accent-strong: #028045;
+  --accent-soft: #e9f6ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--page-background);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.ant-card .ant-card-body,
+.ant-form-item .ant-form-item-label > label,
+.ant-input,
+.ant-select,
+.ant-table {
+  font-size: 13px;
+}
+
+.ant-form-item .ant-form-item-label > label {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.ant-input,
+.ant-input-password,
+.ant-select-selector,
+.ant-picker,
+.ant-input-affix-wrapper {
+  border-radius: 6px !important;
+  color: #212121 !important;
+}
+
+.ant-btn {
+  border-radius: 6px;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  font-size: 13px;
+  color: #212121;
+}
+
+.ant-table-thead > tr > th {
+  font-weight: 600;
+}
